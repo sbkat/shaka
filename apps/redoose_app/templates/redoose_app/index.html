@@ -1,0 +1,143 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'redoose_app/css/style_index.css' %}">
+    <link rel="shortcut icon" href="{% static 'redoose_app/images/favicon.ico' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'redoose_app/images/favicon.ico' %}" type="image/x-icon">
+    <title>shaka~~</title>
+</head>
+
+<body onload="incrementCount(10)" style="text-align: center;">
+    <div class="parallax"></div>
+
+    <section class="grid">
+        <div class="left-half">
+            <!-- Photo by Brian Yurasits on Unsplash -->
+            <img src="{% static 'redoose_app/images/pollution_1.jpg' %}" alt="plastic-pollution">
+        </div>
+        <div class="right-half yellow middle">
+            <h1>
+                Join the wave<br>
+                in cleaning our oceans<br>
+                by using the<br>
+                shaka~~ search engine.<br>
+                <a href="/search" class="btn btn-info">Start searching</a>
+            </h1>
+        </div>
+    </section>
+
+    <div style="padding:20px;">
+        <h1>Here's how it works</h1>
+        <div class="col-3">
+            <h2>1</h2>
+            <!-- Icon from freeicons.io -->
+            <img src="{% static 'redoose_app/images/search.png' %}" alt="search" class="icon">
+            <p>Surf the web just like you would<br> through any other search engine</p>
+        </div>
+        <div class="col-3">
+            <h2>2</h2>
+            <!-- Icon from freeicons.io -->
+            <img src="{% static 'redoose_app/images/revenue.png' %}" alt="ads" class="icon">
+            <p>Ads generate revenue</p>
+        </div>
+        <div class="col-3">
+            <h2>3</h2>
+            <!-- Icon from freeicons.io -->
+            <img src="{% static 'redoose_app/images/cleaning.png' %}" alt="cleaning" class="icon">
+            <p>Proceeds go directly towards<br> ocean cleaning efforts</p>
+        </div>
+    </div>
+    <div class="grey">
+        <h1 style="display:inline-block">Every minute, approximately 30,000lbs of plastic enters the ocean.</h1>
+        <p style="display:inline-block; margin-left: 10px;"><sub><a
+                    href="http://www3.weforum.org/docs/WEF_The_New_Plastics_Economy.pdf" target="_blank"><b>1</b>
+                </a></sub></p><br>
+        <!-- Garbage Truck icon by Icons8 -->
+        <img src="{% static 'redoose_app/images/garbage.png' %}" alt="garbage">
+        <p>That is equivalent to one garbage truck.</p>
+        <p>Since visiting this page,</p>
+        <div class="container_inner" id="display_div_id" style="margin-top:8px;"></div>
+        <p>pounds of trash has already accumulated.</p>
+    </div>
+
+    <section class="grid">
+        <div class="left-half middle">
+            <h1>Did you know?
+            <p>Plastic can take 500+ years to degrade.</p>
+            <p>That means if William Shakespeare drank a water bottle<br> while writing "A Midsummer Night's Dream",<br>the water bottle would still exist today.<br>...all before the Mayflower arrived in Plymouth,
+            Massachusetts,<br>...all before Isaac Newton discovered the laws of motion.</p>
+            </h1>
+        </div>
+        <div class="right-half">
+            <img src="{% static 'redoose_app/images/shakespeare.jpg' %}" alt="shakespeare">
+        </div>
+    </section>
+
+    <section class="grid">
+        <div class="left-half">
+            <!-- Photo by Peter Bond on Unsplash -->
+            <img src="{% static 'redoose_app/images/grocery.jpg' %}" alt="grocery">
+        </div>
+        <div class="right-half green middle">
+            <h1>Ways you can reduce<br> your <i>plastic</i> footprint<br>
+                <p>Seek alternatives to packaged foods</p>
+                <p>Eliminate single use plastic (utensils, cups, straws)</p>
+                <p>Use reusable products (water bottles, grocery and produce bags)</p>
+                <p>Switch to shampoo and lotion bars</p>
+                <p>Invest in plastic free cleaning supplies</p>
+                <a href="/info" class="btn btn-info">Learn more</a>
+            </h1>
+        </div>
+    </section>
+
+    <div style="padding:20px">
+        <h1>Get Started</h1>
+        <ul style="list-style: none;">
+            <li>Stay <a href="/subscription">connected</a></li>
+            <li><a href="/donate">Donate</a> to the cause</li>
+            <li>Start searching with <a href="/search" target="_blank">Shaka~~</a></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    var counter_list = [000, 000, 000];
+    var str_counter_0 = counter_list[0];
+    var str_counter_1 = counter_list[1];
+    var str_counter_2 = counter_list[2];
+    var display_str = "";
+    var display_div = document.getElementById("display_div_id");
+
+    function incrementCount(current_count) {
+        setInterval(function () {
+            // clear count
+            while (display_div.hasChildNodes()) {
+                display_div.removeChild(display_div.lastChild);
+            }
+            str_counter_0 += 50;
+            if (str_counter_0 > 1000000000000) {
+                str_counter_0 = 0; // reset count
+            }
+            display_str = str_counter_2.toString() + str_counter_1.toString() + str_counter_0.toString();
+            for (var i = 0; i < display_str.length; i++) {
+                var new_span = document.createElement('span');
+                new_span.className = 'num_tiles';
+                new_span.innerText = display_str[i];
+                display_div.appendChild(new_span);
+            }
+        }, 100);
+    }
+</script>

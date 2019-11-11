@@ -1,0 +1,47 @@
+h1 {
+    font-family: 'Amatic SC', sans-serif;
+    font-size: 4vw;
+}
+
+p,
+li {
+    font-size: 1.5vw;
+    margin: 0px;
+    color: black;
+    font-family: 'Open Sans Condensed'
+}
+
+div {
+    text-align: center;
+    padding:20px;
+}
+
+#myChart {
+    padding:15px;
+    display: inline-block;
+}
+
+
+.grey {
+    background-color: rgb(148, 143, 143, 0.2);
+    padding: 20px;
+}
+
+.container {
+    width: 40vw;
+    text-align: center;
+}
+
+.products {
+    width:25vw;
+    display:inline-block;
+    vertical-align: middle;
+}
+
+.product_img {
+    height:200px;
+}
+
+a:link {
+    text-decoration: none;
+}

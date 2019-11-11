@@ -1,0 +1,76 @@
+h1 {
+    font-family: 'Amatic SC', sans-serif;
+    font-size: 3.5vw;
+}
+
+h2 {
+    font-family: 'Amatic SC', sans-serif;
+    font-size: 2.5vw;
+}
+
+h3 {
+    font-family: 'Open Sans Condensed';
+    font-size: 1vw;
+    color: rgb(14, 60, 145);
+    /* margin-left:20vw; */
+}
+
+p,
+li {
+    font-size: 1.5vw;
+    margin: 0px;
+    color: black;
+    font-family: 'Open Sans Condensed'
+}
+
+div {
+    text-align: center;
+}
+
+#myChart {
+    margin-left: 25%;
+    padding:15px;
+}
+
+.grey {
+    background-color: rgb(148, 143, 143, 0.2);
+    padding: 20px;
+    width: 100vw;
+}
+
+.container {
+    width: 80vw;
+    text-align: center;
+}
+
+.bio {
+    display:inline-block;
+    vertical-align: middle;
+    width:60%;
+    text-align: left;
+}
+
+.org_logo {
+    width:20%;
+    margin-right:20px;
+}
+
+.disclaimer {
+    width: 50vw;
+    text-align:left;
+    margin-top:50px;
+    margin-right:auto;
+    margin-left:auto;
+    margin-bottom:20px;
+}
+
+#button {
+    width:100px;
+    border-radius:5px;
+    margin:0px;
+}
+
+button {
+    padding:0px;
+    border-radius:10px;
+}
